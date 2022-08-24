@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cart = [];
+      const product = { id: 123, name: "test", price: 1200 };
+      console.log(cart);
+      console.log(product);
+      cart.push(product); // same ref
+      //cart[0].qty = 3; // mutating the data
+      // to clone objects : ... (spread operator)
+      // immutability
+      cart = [...cart, { ...product }]; // new ref
+      cart[1].qty = 4; // using immutable objects
+      console.log(cart);
+      console.log(product);
+    </script>
+  </body>
+</html>

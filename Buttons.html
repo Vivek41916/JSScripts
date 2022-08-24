@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button onclick="displayValue()">1</button>
+    <button onclick="displayValue()">2</button>
+    <button onclick="displayValue()">3</button>
+    <button onclick="displayValue()">4</button>
+    <button onclick="displayValue()">5</button>
+    <button onclick="displayValue()">6</button>
+    <button onclick="displayValue()">7</button>
+    <button onclick="displayValue()">8</button>
+    <button onclick="displayValue()">9</button>
+    <button onclick="displayValue()">0</button>
+    <script>
+      function displayValue() {
+        // using event object
+        console.log(event, event.target);
+        const textbox = document.querySelector("input");
+        // console.log(data, data.innerText);
+        textbox.value += event.target.innerText; // data, data.innerText;
+      }
+    </script>
+  </body>
+</html>

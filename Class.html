@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // arrow function : () => expression
+      // to access the current object instance : this
+      const user = {
+        name: "mike",
+        age: 12,
+        greeting: function () {
+          setTimeout(function () {
+            console.log("hello from", this.name);
+          }, 1000);
+        },
+      };
+
+
+      const user2 = {
+        name: "mike",
+        age: 12,
+        greeting: function () {
+          console.log("Outside",this);
+          setTimeout(()=> {
+            console.log("Inside",this);
+            console.log("hello from", this.name);
+          }, 1000);
+        },
+      };
+      user2.greeting();
+      user2.name = "john";
+      user2.greeting();
+
+      const user3 = {
+        name: "mike",
+        age: 12,
+        greeting: function () {
+          console.log("Outside",this);
+          setTimeout( function() {
+            console.log("Inside",this);
+            console.log("hello from", this.name);
+          }, 1000);
+        },
+      };
+      user3.greeting();
+      user3.name = "john";
+      user3.greeting();
+      </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(var i=0;i<10;i++){
+            console.log('TASK',i);
+        }
+        for(let i=0;i<10;i++){
+            setTimeout(function () {
+                console.log('TASK', i);
+            }, i * 1000)
+        }
+    </script>
+</body>
+</html>

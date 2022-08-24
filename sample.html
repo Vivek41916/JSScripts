@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6 : let & const : block scope variable
+        // var : only one single memory is assigned to variable i in this case
+        for (let i = 0; i < 10; i++) {
+          // we need to have 10 different memory allocations for each iteration
+          setTimeout(function () {
+            // let : memory references for each iteration is unique
+            console.log("TASK", i); // using the same reference of i for each iteration
+          }, i * 100);
+        }
+        // const : read-only variable
+        // tries to identify the reference changes
+        // primitive types : immutable by nature : number, string, boolean
+        const a = 10;
+        // a = 20;
+        // arrays & objects : mutable by default
+        const b = { name: "mike", age: 12 };
+        b.name = "demo"; // mutating the object
+        b = { name: "hello" }; // keeping the object immutable
+        // memory reference remains the same, but the value is changed
+      </script>
+</body>
+</html>

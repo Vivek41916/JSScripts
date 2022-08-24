@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cars = ["Audi", "Merc", "BMW", "Volvo"];
+      // for (let i = 0; i < cars.length; i++) {
+      //   console.log(cars[i]);
+      // }
+      // for of loop
+      for (let c of cars) {
+        console.log(c);
+      }
+      const nos = [1, 2, 3, 4, 5, 6];
+      // [1,4,9,16,25,36]
+      // const square = [];
+      // for (let n of nos) {
+      //   square.push(n * n);
+      // }
+      // immutability
+      const square = nos.map((value, index, array) => {
+        console.log(value, index, array);
+        return value * value;
+        // return the updated value
+      });
+      console.log(square);
+      const square2 = nos.map((value, index, array) => {
+        console.log(value, index, array);
+        if(value%2===0){
+        return value * value;}
+        // return the updated value
+      });
+      console.log(square2)
+      // filter
+      const evenNos = square2.filter((val) => {
+        // return boolean
+        return val !== undefined;
+      });
+      console.log(evenNos);
+      const even = nos
+        .filter((val) => {
+          return val % 2 === 0;
+        })
+        .map((v) => {
+          return v * v;
+        });
+      console.log(even);
+    </script>
+  </body>
+</html>

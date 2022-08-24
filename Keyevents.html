@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+      <!--backspace work here -->
+    <input type="text" placeholder="Keypress" onkeypress="restrictToNumbers()" />
+    <input type="text" placeholder="Keyup" onkeyup="changeCase()" />
+    <!-- backspace wont work here -->
+    <input type="text" placeholder="Keydown" onkeydown="restrictToNumbers()" />
+    <script>
+      function testEvent() {
+        console.log("Event", event.type);
+      }
+      function changeCase() {
+        event.target.value = event.target.value.toUpperCase();
+      }
+      function restrictToNumbers() {
+        if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode === 8 )  {
+          // non-numerics
+          event.preventDefault(); // used to cancel the default behavior of any event
+        }
+      }
+    </script>
+  </body>
+</html>

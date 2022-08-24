@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Test Paragraph</p>
+    <button onclick="changeContent()">Change</button>
+    <script>
+      function changeContent() {
+        const ele = document.getElementById("demo");
+        ele.innerHTML = "updated <b>content</b>"; // formatted html
+      }
+    </script>
+  </body>
+</html>

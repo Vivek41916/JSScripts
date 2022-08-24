@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="validate()">
+      <input type="text" placeholder="Name" />
+      <input type="text" placeholder="Age" />
+      <button type="submit">Submit</button>
+      <button type="reset">Cancel</button>
+      <script>
+        function testEvent() {
+          console.log("Event", event, event.type);
+        }
+        function validate() {
+          event.preventDefault();
+          // form validation
+          // submit data to server
+          console.log("form submission");
+        }
+      </script>
+    </form>
+  </body>
+</html>
